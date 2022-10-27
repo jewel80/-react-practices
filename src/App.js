@@ -1,33 +1,9 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch, useParams } from "react-router-dom";
-import  About from "./conponents/About";
-import  Home from "./conponents/Home";
-
-const Topic = () => {
-  const { topicName } = useParams();
-  return (<h2>Topic '{topicName}'</h2>)
-};
-const TopicNotSelected = () => { return (<h2>TopicNotSelected</h2>) }
-
-const Topics = () => {
-
-  let match = useRouteMatch();
-
-  return (
-    <>
-      <h2>Topics</h2>
-      <ul>
-        <li><Link to={`${match.url}/components`}>Components</Link></li>
-        <li><Link to={`${match.url}/props`}>Props</Link></li>
-      </ul>
-      <Switch>
-        <Route path={`${match.path}/:topicName`} component={Topic}></Route>
-        <Route path={`${match.path}`} component={TopicNotSelected}></Route>
-      </Switch>
-    </>)
-}
-
+import About from "./conponents/About";
+import Home from "./conponents/Home";
+import Topics from "./conponents/Topics";
 
 function App() {
   return (
@@ -47,6 +23,7 @@ function App() {
           </div>
 
           <div id="page-content-wrapper">
+            
             <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom">
               <h3>hello world</h3>
             </nav>
