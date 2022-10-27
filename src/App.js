@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch, useParams } from "react-router-dom";
+import  About from "./conponents/About";
+import  Home from "./conponents/Home";
 
-const About = () => { return (<h2>About</h2>) };
-const Home = () => { return (<h2>Home</h2>) };
 const Topic = () => {
   const { topicName } = useParams();
   return (<h2>Topic '{topicName}'</h2>)
@@ -13,6 +13,12 @@ const TopicNotSelected = () => { return (<h2>TopicNotSelected</h2>) }
 const Topics = () => {
 
   let match = useRouteMatch();
+
+  console.log('---------------------');
+  console.log( match.url);
+  console.log('---------------------');
+  console.log( match.path);
+  console.log('---------------------');
 
   return (
     <>
@@ -39,7 +45,8 @@ function App() {
             <div className="list-group list-group-flush">
 
               <Link to="/" className="list-group-item list-group-item-action bg-light">Home</Link>
-              <Link to="/about" className="list-group-item list-group-item-action bg-light">Dashboard</Link>
+              <Link to="#" className="list-group-item list-group-item-action bg-light">Dashboard</Link>
+              <Link to="/about" className="list-group-item list-group-item-action bg-light">About</Link>
               <Link to="/topics" className="list-group-item list-group-item-action bg-light">Topics</Link>
 
             </div>
