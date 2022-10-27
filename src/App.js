@@ -14,12 +14,6 @@ const Topics = () => {
 
   let match = useRouteMatch();
 
-  console.log('---------------------');
-  console.log( match.url);
-  console.log('---------------------');
-  console.log( match.path);
-  console.log('---------------------');
-
   return (
     <>
       <h2>Topics</h2>
