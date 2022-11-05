@@ -1,14 +1,12 @@
 import React from 'react';
-import Counter from './components/Counter';
-
+import Todos from './components/Todos';
 
 
 
 function App() {
   return (
     <div>
-      <h1> Hello world</h1>
-      <Counter />
+      <Todos/>
     </div>
   );
 }
