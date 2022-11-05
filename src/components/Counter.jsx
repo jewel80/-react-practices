@@ -4,8 +4,7 @@ import { decrementCounter, incrementCounter, resetCounter } from '../services/ac
 
 const Counter = () => {
     const count = useSelector((state) => state.count)
-    console.log(count);
-
+    
     const dispatch = useDispatch();
     const handleIncrement = () => {
         dispatch(incrementCounter())
